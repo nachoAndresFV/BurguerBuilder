@@ -2,7 +2,7 @@ import React from 'react';
 import Aux from '../../hoc/Aux';
 import layoutStyle from './Layout.module.css';
 
-const layout = (props) => (
+const layout = (props) => ( 
     <Aux>
         <div>
             toolBar,
