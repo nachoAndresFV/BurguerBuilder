@@ -1,5 +1,6 @@
 import React from 'react';
 import Aux from '../../hoc/Aux';
+import layoutStyle from './Layout.module.css';
 
 const layout = (props) => (
     <Aux>
@@ -8,7 +9,7 @@ const layout = (props) => (
             siderDrawer,
             backDrop
         </div>
-        <main>
+        <main className={layoutStyle.Content}>
             {props.children}
         </main>
     </Aux>
