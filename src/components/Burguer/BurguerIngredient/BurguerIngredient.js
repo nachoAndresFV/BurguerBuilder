@@ -6,26 +6,26 @@ class BurguerIngredient extends Component {
     render(){
         let ingredient = null;
         switch (this.props.type) {
-            case 'BreadBottom':
+            case 'bread-bottom':
                 ingredient = <div className={burguerIngredientStyle.BreadBottom}></div>;
                 break;
-            case 'BreadTop':
+            case 'bread-top':
                 ingredient = (
                     <div className={burguerIngredientStyle.BreadTop}>
                         <div className={burguerIngredientStyle.Seeds1}></div>
                         <div className={burguerIngredientStyle.Seeds2}></div>
                     </div>);
                 break;
-            case 'Meat':
+            case 'meat':
                 ingredient = <div className={burguerIngredientStyle.Meat}></div>;
                 break;   
-            case 'Cheese':
+            case 'cheese':
                 ingredient = <div className={burguerIngredientStyle.Cheese}></div>;
                 break;  
-            case 'Salad':
+            case 'salad':
                 ingredient = <div className={burguerIngredientStyle.Salad}></div>;
                 break; 
-            case 'Bacon':
+            case 'bacon':
                 ingredient = <div className={burguerIngredientStyle.Bacon}></div>;
                 break; 
             default:
