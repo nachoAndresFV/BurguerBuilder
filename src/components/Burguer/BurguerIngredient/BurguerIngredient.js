@@ -6,10 +6,10 @@ class BurguerIngredient extends Component {
     render(){
         let ingredient = null;
         switch (this.props.type) {
-            case 'BreadBotton':
+            case 'BreadBottom':
                 ingredient = <div className={burguerIngredientStyle.BreadBottom}></div>;
                 break;
-            case 'BreaTop':
+            case 'BreadTop':
                 ingredient = (
                     <div className={burguerIngredientStyle.BreadTop}>
                         <div className={burguerIngredientStyle.Seeds1}></div>
