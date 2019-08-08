@@ -18,7 +18,7 @@ const burguer = (props) => {
     if (transformedIngredients.length === 0) {
         transformedIngredients = <h1>Please start adding ingredients!</h1>;
     }
-    console.log(transformedIngredients);
+    //console.log(transformedIngredients);
 
     return (
         <div className={burguerStyle.Burguer}>
