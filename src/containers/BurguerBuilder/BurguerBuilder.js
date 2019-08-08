@@ -112,6 +112,7 @@ class BurguerBuilder extends Component{
                         ingredients={this.state.ingredients}
                         cancelButton={this.purchaseCancelHandler}
                         continueButton={this.purchaseContiueHandler}
+                        totalPrice={this.state.totalPrice}
                     />
                 </Modal>
                 <Burguer ingredients={this.state.ingredients}/>
