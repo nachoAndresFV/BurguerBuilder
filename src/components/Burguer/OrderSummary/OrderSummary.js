@@ -1,37 +1,46 @@
-import React from 'react';
-import Aux from '../../../hoc/Aux';
+import React,{Component} from 'react';
+import Aux from '../../../hoc/Aux/Aux';
 import Button from '../../UI/Button/Button';
 
-const orderSummary = (props) => {
+class OrderSummary extends Component {
 
-    const ingredientSummary = Object.keys(props.ingredients).map((ingredientKey)=>{
-        return <li 
-                key={ingredientKey}>
-                    <span style={{textTransform: 'capitalize'}}>{ingredientKey} </span>: {props.ingredients[ingredientKey]}
-                </li>
-    });
+    componentDidUpdate(){
+        console.log('[OrderSummary] DidUpdate');
+    }
 
-    return (
-        <Aux>
-            <h3>Your Order</h3>
-            <p>A tasty burguer with the following ingredients: </p>
-            <ul>
-                {ingredientSummary}
-            </ul>
-            <p><strong>Total price: {props.totalPrice.toFixed(2)}</strong></p>
-            <p>Continue to checkout?</p>
-            <Button 
-                btnType="Danger"
-                click={props.cancelButton}>
-                CANCEL
-            </Button>
-            <Button 
-                btnType="Success"
-                click={props.continueButton}>
-                CONTINUE
-            </Button>
-        </Aux>
-    );
+    render(){
+
+        
+        const ingredientSummary = Object.keys(this.props.ingredients).map((ingredientKey)=>{
+            return <li 
+                    key={ingredientKey}>
+                        <span style={{textTransform: 'capitalize'}}>{ingredientKey} </span>: {this.props.ingredients[ingredientKey]}
+                    </li>
+        });
+
+        return (
+            <Aux>
+                <h3>Your Order</h3>
+                <p>A tasty burguer with the following ingredients: </p>
+                <ul>
+                    {ingredientSummary}
+                </ul>
+                <p><strong>Total price: {this.props.totalPrice.toFixed(2)}</strong></p>
+                <p>Continue to checkout?</p>
+                <Button 
+                    btnType="Danger"
+                    click={this.props.cancelButton}>
+                    CANCEL
+                </Button>
+                <Button 
+                    btnType="Success"
+                    click={this.props.continueButton}>
+                    CONTINUE
+                </Button>
+            </Aux>
+        );
+    }
+    
 };
 
-export default orderSummary;
+export default OrderSummary;
