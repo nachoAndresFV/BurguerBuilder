@@ -20,13 +20,14 @@ class BurguerBuilder extends Component{
     state = {
         ingredients: null,
         totalPrice: 4,
-        purchasable: false,
+        purchasable: true,
         purchasing:false,
         loading: false,
         error: false
 
     }
     componentDidMount(){
+        console.log('componentDidMount()....')
         axios.get('/ingredients.json')
              .then(response => {
                  this.setState({
@@ -43,6 +44,7 @@ class BurguerBuilder extends Component{
     }
 
     updatetePurchasableState(ingredients){
+        console.log('UPDATING PURCHASABLE...');
         const sum = Object.keys(ingredients).map((ingredientKey)=>{
             return ingredients[ingredientKey];
         }).reduce((sum,element)=>{ //reduce to the sum of all ingredients
