@@ -1,0 +1,12 @@
+.Order{
+    width: 80%;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    padding: 10px;
+    margin: 10px auto; /*Top and Bottom*/
+    box-sizing: border-box; /*This will include the padding in the box size*/
+    text-align: center;
+}
+.Order h2{
+    text-transform: uppercase;
+}
