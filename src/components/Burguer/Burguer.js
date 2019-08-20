@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 import BurguerIngredient from './BurguerIngredient/BurguerIngredient';  
 import burguerStyle from './Burguer.module.css';
 
@@ -29,4 +30,4 @@ const burguer = (props) => {
     );
 };
 
-export default burguer;
+export default withRouter(burguer); //We will get the match, location and history props ...

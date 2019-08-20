@@ -4,8 +4,8 @@ import navegationItemsStyle from './NavegationItems.module.css';
 
 const navegationItems = (props) => (
     <ul className={navegationItemsStyle.NavegationItems}>
-        <NavigationItem link="/" active>Burguer Builder</NavigationItem>
-        <NavigationItem link="/">Checkout</NavigationItem>
+        <NavigationItem link="/" exact>Burguer Builder</NavigationItem>
+        <NavigationItem link="/my-orders">My Orders</NavigationItem>
     </ul>
 );
 
