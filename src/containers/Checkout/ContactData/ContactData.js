@@ -30,8 +30,8 @@ class ContactData extends Component {
             ingredientes: this.props.ingredients,
             totalPrice: this.props.price,
             customer: {
-                name: 'Tokita Ohma',
-                email: 'ohma@kengan.com',
+                name: 'Baki Hanma',
+                email: 'hanma@raitai.com',
                 address: {
                     street: 'Shinjuku',
                     zipCode:'101-8656',
@@ -39,7 +39,7 @@ class ContactData extends Component {
                     Country: 'Japan'
                 }
             },
-            deliveryMethod: 'fighterEats'
+            deliveryMethod: 'raitaiEats'
         }
         axios.post('/orders.json', currentOrder)
              .then(response => {

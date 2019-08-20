@@ -1,7 +1,7 @@
 import React from 'react';
 import Burguer from '../../Burguer/Burguer';
 import Button from '../../UI/Button/Button';
-import checkoutSummaryStyle from './CheckoutSummary.module.css';
+import checkoutSummaryStyle from './CheckoutSummary.module.css'; 
 
 const checkoutSummary = (props) => {
     return (
