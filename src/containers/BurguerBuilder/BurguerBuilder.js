@@ -110,7 +110,7 @@ class BurguerBuilder extends Component{
         const queryParams = [];
          for(let i in this.state.ingredients){
             queryParams.push(encodeURIComponent(i) + '=' + encodeURI(this.state.ingredients[i]))      //This encode the elements for being used in the url. "i" is the key.
-            console.log(i + this.state.ingredients[i]);
+            console.log(i + "->" + this.state.ingredients[i]);
         }
         queryParams.push('price='+this.state.totalPrice);
         const queryString = queryParams.join('&');
